@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="com.springcore.Bus_Service.Location" name="loc1">
+<property name="Tocity" value="kolkata"/>
+<property name="Fromcity" value="Durgapur"/>
+</bean>
+
+<bean class="com.springcore.Bus_Service.Location" name="loc2">
+<property name="Tocity" value="asansol"/>
+<property name="Fromcity" value="Durgapur"/>
+</bean>
+
+<bean class="com.springcore.Bus_Service.Service" name="bus1" p:id="101" p:name="A50">
+<property name="drivers">
+    <list>
+    <value>Amit das</value>
+    <value>sunil ganguly</value>
+    <value>amal ghosh</value>
+    </list>
+</property>
+<property name="locations">
+    <ref bean="loc1"/>
+</property>
+</bean>
+
+<bean class="com.springcore.Bus_Service.Service" name="bus2" p:id="151" p:name="45A">
+<property name="drivers">
+    <list>
+    <value>sumit das</value>
+    <value>sunil jha</value>
+    <value>bikash kumar das</value>
+    </list>
+</property>
+<property name="locations">
+    <ref bean="loc2"/>
+</property>
+</bean>
+
+</beans>
